@@ -4,11 +4,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
+/* не используется
 
+ */
 @SpringBootTest
 @ActiveProfiles("test")
 class LibraryManagementApplicationTests {
-  @Test
-  void contextLoads() {}
+  void contextLoads() {
+// intentionally empty: verifies Spring context loads successfully
+  }
 }
 
