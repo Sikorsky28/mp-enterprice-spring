@@ -1,5 +1,5 @@
 spring:
   liquibase:
-    enabled: false   # отключаем миграции, чтобы не мешали юнит-тестам
+    enabled: false
   testcontainers:
-    enabled: false   # отключаем Testcontainers
+    enabled: false
