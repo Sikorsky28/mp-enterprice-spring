@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-book-table
+      author: maxim
+      comment: "Создание основной таблицы книг по спецификации OpenAPI"
+      changes:
+        - createTable:
+            tableName: book
+            remarks: "Таблица книг в библиотеке"
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  remarks: "Первичный ключ"
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: isbn
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: published_date
+                  type: date
+                  remarks: "Дата публикации (опционально)"
+              - column:
+                  name: available
+                  type: boolean
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+
+      # rollback — очень рекомендуется писать (для отката изменений)
+      rollback:
+        - dropTable:
+            tableName: book
