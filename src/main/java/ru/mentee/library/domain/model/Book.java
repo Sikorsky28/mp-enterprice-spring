@@ -1,4 +1,3 @@
 package ru.mentee.library.domain.model;
 
-public class Book {
-}
+public class Book {}

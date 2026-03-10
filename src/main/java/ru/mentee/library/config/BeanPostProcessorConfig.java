@@ -1,4 +1,3 @@
 package ru.mentee.library.config;
 
-public class BeanPostProcessorConfig {
-}
+public class BeanPostProcessorConfig {}
