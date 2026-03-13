@@ -5,7 +5,7 @@ databaseChangeLog:
       comment: "Создание основной таблицы книг по спецификации OpenAPI"
       changes:
         - createTable:
-            tableName: book
+            tableName: books
             remarks: "Таблица книг в библиотеке"
             columns:
               - column:
@@ -46,4 +46,4 @@ databaseChangeLog:
       # rollback — очень рекомендуется писать (для отката изменений)
       rollback:
         - dropTable:
-            tableName: book
+            tableName: books
